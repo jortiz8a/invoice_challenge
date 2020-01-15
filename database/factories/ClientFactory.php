@@ -13,7 +13,7 @@ $factory->define(Client::class, function (Faker $faker) {
         'id_number'=> $faker->ean8,
         'email'=> $faker->email,
         'address'=> $faker->streetAddress,
-        'phone'=> $faker->ean8,
+        'phone'=> $faker->randomNumber(10),
         'country'=> $faker->country,
         'city'=> $faker->city,
 

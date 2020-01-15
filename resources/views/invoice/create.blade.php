@@ -23,40 +23,34 @@
                                 </div>
                                 @endif
                             </div>
-                            <form action="{{ route('invoices.index') }}" method="POST">
+                            <form action="{{ route('invoices.store') }}" method="POST">
                                 @csrf
-                                <b>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="description">Descripción </label>
-                                        <input type="text" class="form-control" id="description" name="description" placeholder="Descripción del Producto" value="{{ old('description') }}">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="code">#Consecutivo </label>
-                                        <input type="text" class="form-control" id="code" name="code" placeholder="Ingrese el Consecutivo" value="{{ old('code') }}">
-                                    </div>
-                                </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label>Tienda </label>
-                                        <select name="Store_id" id="Store_id" class="form-control @error('Store') is-invalid @enderror">
+                                        <select name="store_id" id="store_id" class="form-control @error('store_id') is-invalid @enderror" required>
+                                            <option value="">{{ __('Por favor seleccione un valor de la lista') }}</option>
                                             @foreach($stores as $store)
-                                            <option value='{{ $store->id }}'> {{ 'NIT ' . $store->nit . ' ' . $store->name }} </option>
+                                            <option value='{{ $store->id }}' {{ $store->id == old('store_id') ? 'selected' : '' }}> {{ 'NIT ' . $store->nit . ' ' . $store->name }} </option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label>Cliente </label>
-                                        <select name="client_id" id="client_id" class="form-control @error('client') is-invalid @enderror">
+                                        <select name="client_id" id="client_id" class="form-control @error('client_id') is-invalid @enderror" required>
+                                            <option value="">{{ __('Por favor seleccione un valor de la lista') }}</option>
                                             @foreach($clients as $client)
-                                            <option value='{{ $client->id }}'> {{ $client->id_type . ' ' . $client->id_number . ' ' . $client->name . ' ' . $client->last_name  }} </option>
+                                            <option value='{{ $client->id }}' {{ $client->id == old('client_id') ? 'selected' : '' }}> {{ $client->id_type . ' ' . $client->id_number . ' ' . $client->name . ' ' . $client->last_name  }} </option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="description">Descripción </label>
+                                        <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="3" required>{{ old('description') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group text-center">
                                     <button type="submit" name="btnGuardar" class="btn btn-primary"> GUARDAR </button>
-                                </b>
                                 </div>
                             </form>
                         </div>

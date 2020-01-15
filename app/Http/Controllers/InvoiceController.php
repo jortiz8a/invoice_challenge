@@ -62,18 +62,21 @@ class InvoiceController extends Controller
     {
         $validData = $request->validate([
             'description' => 'required',
-            'code' => 'required|unique:invoices',
-            'client_id' => 'required',
-            'Store_id' => 'required',
+            'client_id' => 'required|exists:clients,id',
+            'store_id' => 'required|exists:stores,id',
         ]);
 
         $invoice = new Invoice();
         $invoice->description = $validData['description'];
-        $invoice->code = $validData['code'];
         $invoice->client_id = $validData['client_id'];
-        $invoice->store_id = $validData['Store_id'];
+        $invoice->store_id = $validData['store_id'];
         $invoice->expires_at = date("Y-m-d H:i:s", strtotime($invoice->created_at . "+ 30 days"));
         $invoice->save();
+
+        $invoice->refresh();
+
+        $invoice->update(['code' => str_pad($invoice->id, 6, '0', STR_PAD_LEFT)]);
+
         return redirect()->route('invoices.edit', $invoice->id);
     }
 
@@ -118,19 +121,17 @@ class InvoiceController extends Controller
     {
         $validData = $request->validate([
             'description' => 'required',
-            'code' => 'required',
-            'client_id' => 'required',
-            'Store_id' => 'required',
-            'state' => 'required',
-            'subtotal' => 'required',
-            'total' => 'required',
-            'vat' => 'required',
+            'client_id' => 'required|exists:clients,id',
+            'store_id' => 'required|exists:stores,id',
+            'state' => 'required|in:1,2',
+            'subtotal' => 'required|numeric',
+            'total' => 'required|numeric',
+            'vat' => 'required|numeric',
         ]);
         $invoice = Invoice::find($id);
         $invoice->description = $validData['description'];
-        $invoice->code = $validData['code'];
         $invoice->client_id = $validData['client_id'];
-        $invoice->store_id = $validData['Store_id'];
+        $invoice->store_id = $validData['store_id'];
         $invoice->expires_at = date("Y-m-d H:i:s", strtotime($invoice->created_at . "+ 30 days"));
         if ($validData['state'] == '1') {
             $now = new \DateTime();

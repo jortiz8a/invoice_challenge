@@ -26,49 +26,45 @@
                             <form action="/invoices/{{ $invoice->id }}" method="POST">
                                 @csrf
                                 @method('put')
-                                <b>
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="description">Descripción </label>
-                                        <input type="text" class="form-control" id="description" name="description" value="{{ $invoice->description }}" placeholder="Descripción">
-                                    </div>
                                     <div class="form-group col-md-6">
                                         <label for="code">#Consecutivo </label>
-                                        <input type="text" class="form-control" id="code" name="code" value="{{ $invoice->code }}" placeholder="#Consecutivo">
+                                        <div class="form-control disabled">{{ $invoice->code }}</div>
                                     </div>
-                                </div>
-                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label>Tienda </label>
-                                        <select name="Store_id" id="Store_id" class="form-control @error('Store') is-invalid @enderror">
-                                            <option value='{{ $invoice->store->id }}' selected>{{ 'NIT ' . $invoice->store->nit . ' ' . $invoice->store->name }}</option>
+                                        <select name="store_id" id="store_id" class="form-control @error('store_id') is-invalid @enderror" required>
+                                            <option value="">{{ __('Por favor seleccione un valor de la lista') }}</option>
                                             @foreach($stores as $store)
-                                            <option value=' {{ $store->id }}'> {{ 'NIT ' . $store->nit . ' ' . $store->name }} </option>
+                                                <option value='{{ $store->id }}' {{ $store->id == old('store_id', $invoice->store_id) ? 'selected' : '' }}> {{ 'NIT ' . $store->nit . ' ' . $store->name }} </option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label>Cliente </label>
-                                        <select name="client_id" id="client_id" class="form-control @error('client') is-invalid @enderror">
-                                            <option value='{{ $invoice->client->id }}' selected>{{$invoice->client->id_type . ' ' . $invoice->client->id_number . ' ' . $invoice->client->name . ' ' . $invoice->client->last_name }}</option>
+                                        <select name="client_id" id="client_id" class="form-control @error('client_id') is-invalid @enderror" required>
+                                            <option value="">{{ __('Por favor seleccione un valor de la lista') }}</option>
                                             @foreach($clients as $client)
-                                            <option value='{{ $client->id }}'> {{ $client->id_type . ' ' . $client->id_number . ': ' . $client->name . ' ' . $client->last_name  }} </option>
+                                                <option value='{{ $client->id }}' {{ $client->id == old('client_id', $invoice->client_id) ? 'selected' : '' }}> {{ $client->id_type . ' ' . $client->id_number . ' ' . $client->name . ' ' . $client->last_name  }} </option>
                                             @endforeach
                                         </select>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Estado: </label>
-                                    <select name="state" id="state">
-                                        @if (isset($invoice->state))
-                                        <option value='1' selected> PAGADA </option>
-                                        <option value='2'> SIN PAGAR </option>
-                                        @else
-                                        <option value='2' selected> SIN PAGAR </option>
-                                        <option value='1'> PAGADA </option>
-                                        @endif
-                                    </select>
-                                </b>
+                                    <div class="form-group col-md-6">
+                                        <label>Estado: </label>
+                                        <select name="state" id="state" class="custom-select">
+                                            @if (isset($invoice->state))
+                                                <option value='1' selected> PAGADA </option>
+                                                <option value='2'> SIN PAGAR </option>
+                                            @else
+                                                <option value='2' selected> SIN PAGAR </option>
+                                                <option value='1'> PAGADA </option>
+                                            @endif
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="description">Descripción </label>
+                                        <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="3" required>{{ old('description', $invoice->description) }}</textarea>
+                                    </div>
                                 </div>
                                 <input type="hidden" class="form-control" id="subtotal" name="subtotal" value="{{ $invoice->subtotal }}">
                                 <input type="hidden" class="form-control" id="total" name="total" value="{{ $invoice->total }}">

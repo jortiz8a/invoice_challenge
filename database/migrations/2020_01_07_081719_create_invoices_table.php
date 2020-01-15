@@ -18,7 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->unsignedInteger('client_id');
             $table->unsignedInteger('store_id');
             $table->text('description');
-            $table->string('code')->unique;
+            $table->string('code')->unique();
             $table->float('subtotal')->nullable();
             $table->float('vat')->nullable();
             $table->float('total')->nullable();

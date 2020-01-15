@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0ccda7f-d59b-4a52-860c-fda885bdd954" name="Default Changelist" comment="" />
+    <list default="true" id="c0ccda7f-d59b-4a52-860c-fda885bdd954" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/invoice_challenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/invoice_challenge.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ClientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ClientFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_07_081719_create_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_07_081719_create_invoices_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invoice/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invoice/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -114,9 +134,13 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1W5CwgPTgTNK9G3XvRiA5Blethc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -125,7 +149,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../factura-jorge-1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AppInvoice2.1-master" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -156,7 +180,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578430308260</updated>
-      <workItem from="1578430309808" duration="68893000" />
+      <workItem from="1578430309808" duration="69580000" />
+      <workItem from="1578583807201" duration="1888000" />
+      <workItem from="1578599130181" duration="121000" />
+      <workItem from="1578600572934" duration="3225000" />
+      <workItem from="1578968274504" duration="3381000" />
     </task>
     <servers />
   </component>
@@ -192,46 +220,60 @@
       <screen x="1366" y="0" width="1360" height="728" />
     </state>
     <state x="1458" y="92" width="1176" height="544" key="DiffContextDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578525695596" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1578460516913">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1578974427446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578460516913" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1578451192144">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1827" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578597941277" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578974427446" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1578550282109">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282109" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578451192144" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1578451192144">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1578550282108">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282108" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578451192144" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1578451192144">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1578550282108">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282108" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578451192144" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1578451192144">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1578550282109">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282109" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578451192144" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1578451178072">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1578550282101">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282101" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578451178072" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1578451178072">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1578550282101">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282101" />
     <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1578451178072" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1578451178071">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1578550282101">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282101" />
     <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1578451178071" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1578451178072">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1578550282101">
+      <screen x="1366" y="0" width="1360" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550282101" />
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1578451178072" />
     <state x="432" y="178" key="NewPhpClassDialog" timestamp="1578443292504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="432" y="178" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1578443292504" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1578968276409">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="1742" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578599247893" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578968276409" />
     <state x="276" y="0" width="900" height="716" maximized="true" key="dock-window-1" timestamp="1578511729850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -244,10 +286,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="354" y="40" width="900" height="716" maximized="true" key="dock-window-3/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578514335173" />
-    <state x="1641" y="0" width="998" height="728" key="find.popup" timestamp="1578549552678">
+    <state x="1641" y="0" width="998" height="728" key="find.popup" timestamp="1578550272994">
       <screen x="1366" y="0" width="1360" height="728" />
     </state>
-    <state x="1641" y="0" width="998" height="728" key="find.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578549552678" />
+    <state x="1641" y="0" width="998" height="728" key="find.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578550272994" />
     <state x="276" y="62" width="1002" height="596" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1578458626829" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1578451007793">
       <screen x="0" y="0" width="1366" height="728" />
@@ -257,11 +299,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="scopes/0.0.1366.728@0.0.1366.728" timestamp="1578436815917" />
-    <state x="1710" y="49" width="670" height="678" key="search.everywhere.popup" timestamp="1578524153683">
-      <screen x="1366" y="0" width="1360" height="728" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578603724049">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1710" y="49" width="670" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1578524153683" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578453198794" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578603724049" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
